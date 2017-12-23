@@ -4,7 +4,7 @@
 
 Ensimmäinen viikko kului pitkälti aiheen päättämisessä ja hahmotuksessa sekä ympäristön pystytyksessä. Aihe (lajittelurobotti) löytyi edellisen robolabran videolta ja mukailee siis sen liukuhihnalla kulkevia lego-palikoita niiden värin perusteella lajittelevaa robottia. Lisäksi hahmottelin liukuhihnalle alustavan rakenteen (kuva alla) ja etsin sitä varten omista varatoista sopivia osia. Aihetta miettiessä täytyi pitää itsensä "kurissa", ettei aihe leviä käsiin.
 
-![Liukuhihna](Liukuhihna.png "Liukuhihna")
+![Liukuhihna](/dokumentaatio/iukuhihna.png "Liukuhihna")
 
 Ympäristön pystyttäminen onnistui lopulta, vaikka ongelmia esiintyi lähes joka vaiheessa. RojbOSin imagen lisääminen VirtualBoxiin ja sen jälkeen myös USB-yhteyden saaminen tuotti hieman vaikeuksia. Kun homma alkoi toimia, leJOS-firmwaren flashaaminen tietääkseni onnistui. Vaikeuksia kohdatessa opin etsimään ratkaisua nopean turhautumisen sijaan, vaikka toimintaympäristö olikin aluksi uusi ja outo
 
