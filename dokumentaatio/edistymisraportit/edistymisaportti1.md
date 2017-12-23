@@ -1,6 +1,6 @@
 ## Viikkoraportti 1
 
-** Tuntimäärä: ** ~10 h
+Tuntimäärä: ~10 h
 
 Ensimmäinen viikko kului pitkälti aiheen päättämisessä ja hahmotuksessa sekä ympäristön pystytyksessä. Aihe (lajittelurobotti) löytyi edellisen robolabran videolta ja mukailee siis sen liukuhihnalla kulkevia lego-palikoita niiden värin perusteella lajittelevaa robottia. Lisäksi hahmottelin liukuhihnalle alustavan rakenteen (kuva alla) ja etsin sitä varten omista varatoista sopivia osia. Aihetta miettiessä täytyi pitää itsensä "kurissa", ettei aihe leviä käsiin.
 
