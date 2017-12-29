@@ -2,6 +2,9 @@ package sorterRobot;
 
 import lejos.nxt.*;
 
+/**
+ * Luokka liukuhihnan toiminnan saatelyyn.
+ */
 
 public class BeltController {
 
@@ -9,34 +12,47 @@ public class BeltController {
 	private Button stopButton;
 	private NXTRegulatedMotor m1;
 	private TouchSensor ts;
-	
-	public BeltController(int speed, Button stop, NXTRegulatedMotor motor, TouchSensor sensor) {
+	private boolean running;
+
+	public BeltController(int speed, Button stop, NXTRegulatedMotor motor,
+			TouchSensor sensor) {
 		this.speed = speed;
 		this.stopButton = stop;
 		this.m1 = motor;
 		this.ts = sensor;
+		this.running = false;
 	}
-	
-	public void runBelt(){
+
+	/**
+	 * Metodi vastaa liukuhihnan liikkumisesta ja pysähtymisestä.
+	 */
+	public void runBelt() {
 		m1.setSpeed(speed);
-		boolean running = true;
-		
-		while(true){
-			if(stopButton.isPressed()){
+		this.running = true;
+
+		while (true) {
+			m1.backward();
+			if (stopButton.isPressed()) {
 				break;
 			}
-			
-			m1.backward();
-			
-			if (ts.isPressed()){
-				if (running){
-					m1.stop();
-					running = false;
-				} else {
-					m1.backward();
-					running = true;
-				}
+			if (ts.isPressed()) {
+				pauseBelt();
 			}
 		}
 	}
+
+	/**
+	 * Apumetodi, joka joko käynnistää tai pysäyttää liukuhihnan.
+	 */
+	public void pauseBelt() {
+		if (running) {
+			m1.stop();
+			running = false;
+		} else {
+			m1.backward();
+			running = true;
+		}
+
+	}
+
 }
