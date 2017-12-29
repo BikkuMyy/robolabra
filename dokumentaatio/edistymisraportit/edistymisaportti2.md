@@ -1,0 +1,9 @@
+## Viikkoraportti 2
+
+Tuntimäärä ~15 h
+
+Toisella viikolla sain aikaan jo jotakin konkreettista - lajittelurobotin liukuhihna pyörii ja palojen lajittelu onnistuu käyttämällä ohjainta manuaalisesti. Ennen kuin tätä kaikkea pääsi toteuttamaan, täytyi NXT Brickin firmware vielä flashata uudestaan, koska se oli jossain vaiheessa edellisellä viikolla jäänyt jumiin lataustilaan eli oli aivan mykkä. Ongelmia esiintyy myös koodin siirtämisessä Brickiin -- se onnistuu aina vasta toisella yrityksellä, koska ensimmäisellä kerralla tulee "unable to read response" -tyylinen virhe. Buildia ajaessa löydetyn NXT:n nimi on "NXT" ensimmäisellä kerralla kun taas toisella kerralla se on "Unknown". Haasteita tuotti myös Eclipse-ympäristö, jonka "ominaisuudet" vaativat hieman totuttelua.
+
+Ongelmista huolimatta pääsin siis pisteeseen, jossa robotin kaikkia kolmea liukuhihnaa pyörittää yksi moottori jatkuvasti tietyllä nopeudella. Liukuhihnan voi pysäyttää hetkellisesti pitämällä kosketussensoria "aktiivisena" eli painettuna pohjaan. Lopullisesti se pysähtyy painamalla Brickin oranssia nappia. Tähän mennessä toteutetusta toiminnallisuudesta kuvattiin [video](https://www.dropbox.com/s/6gfreld1poeap2l/File%2028.12.2017%2023.41.34.mov?dl=0).
+
+Palikoiden värin tarkistavaa valosensoria ei vielä lisätty ja niitä kahdelle eri hihnalle ohjaavaa ohjainta testattiin vain manuaalisesti. Seuraavalla viikolla on tavoitteena lisätä valosensori ensimmäiselle liukuhihnalle ja sille sellainen toiminnallisuus, että liukuhihna pysähtyy, kun palikka tulee sen kohdalle ja jatkaa jälleen kulkuaan, kun palikan väriryhmä on määritelty.
