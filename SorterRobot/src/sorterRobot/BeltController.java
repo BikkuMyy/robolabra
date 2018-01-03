@@ -3,7 +3,7 @@ package sorterRobot;
 import lejos.nxt.*;
 
 /**
- * Luokka liukuhihnan toiminnan saatelyyn.
+ * Luokka liukuhihnan toiminnan säätelyyn.
  */
 
 public class BeltController {
@@ -24,21 +24,22 @@ public class BeltController {
 	}
 
 	/**
-	 * Metodi vastaa liukuhihnan liikkumisesta ja pysähtymisestä.
+	 * Metodi vastaa liukuhihnan liikkumisesta ja pysähtymisestä jos painetaan
+	 * kosketussensoria tai pysäytysnappia.
+	 * 
+	 * @return boolean palauttaa false, kun hihna pysäytetään kokonaan.
 	 */
-	public void runBelt() {
+	public boolean runBelt() {
 		m1.setSpeed(speed);
 		this.running = true;
-
-		while (true) {
-			m1.backward();
-			if (stopButton.isPressed()) {
-				break;
-			}
-			if (ts.isPressed()) {
-				pauseBelt();
-			}
+		m1.backward();
+		if (stopButton.isPressed()) {
+			return false;
 		}
+		if (ts.isPressed()) {
+			pauseBelt();
+		}
+		return true;
 	}
 
 	/**
@@ -46,13 +47,30 @@ public class BeltController {
 	 */
 	public void pauseBelt() {
 		if (running) {
+			stop();
+		} else {
+			start();
+		}
+	}
+
+	/**
+	 * Pysäyttää liikkuvan liukuhihnan.
+	 */
+	public void stop() {
+		if (running) {
 			m1.stop();
 			running = false;
-		} else {
+		}
+	}
+
+	/**
+	 * Käynnistää pysäytetyn liukuhihnan.
+	 */
+	public void start() {
+		if (!running) {
 			m1.backward();
 			running = true;
 		}
-
 	}
 
 }
