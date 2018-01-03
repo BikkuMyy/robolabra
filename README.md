@@ -5,3 +5,4 @@ Lajittelurobotti lajittelee liukuhihnalla kulkevia lego-palikoita niiden värin 
 ### Dokumentaatio
 * [Aihemäärittely](dokumentaatio/aihemaarittely.md)
 * [Edistymisraportit](dokumentaatio/edistymisraportit)
+* [Testausraportti](dokumentaatio/testausdokumentti.md)

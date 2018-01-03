@@ -3,15 +3,13 @@ package sorterRobot;
 import lejos.nxt.*;
 
 /**
- * Example leJOS Project with an ant build file
- *
+ * Pääohjelma.
  */
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-		TouchSensor sensor = new TouchSensor(SensorPort.S1);
-		BeltController bc = new BeltController(1000, Button.ENTER, Motor.A, sensor);
-		bc.runBelt();
-		
+		BeltController bc = new BeltController(200, Button.ENTER, Motor.A, new TouchSensor(SensorPort.S1));
+		Sorter sorter = new Sorter(bc, new ColorReader(45, 10, new LightSensor(SensorPort.S2, true)));
+		sorter.run();
 	}
 }
