@@ -2,7 +2,7 @@
 
 ### Ohjelman rakenne
 
-Ohjelman tämänhetkista rakennetta kuvaa alla oleva luokkakaaviossa:
+Ohjelman tämänhetkista rakennetta kuvaa alla oleva luokkakaavio:
 
 ![Luokkakaavio](/dokumentaatio/Luokkakaavio.png "Luokkakaavio")
 

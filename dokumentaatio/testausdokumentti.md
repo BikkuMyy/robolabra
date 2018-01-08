@@ -6,5 +6,8 @@ Testataan lajittelurobotin liukuhihnojen perustoiminnallisuutta. Robotin kaikkie
 ### Vaihe 2
 Testataan lajittelurobotin liukuhihnalle lisätyn valosensorin toimintaa. Kun liukuhinalle lisätään palikka, tulisi hihnan pysähtyä, kun se tulee valosensorin kohdalle. Valosensorin tulisi määrittää palikalle arvo sen värin perustella ja arvon tulisi tulostua NXT Brickin näytölle. Määrityksen jälkeen liukuhihna kuljettaa palikkaa jälleen eteenpäin ja liukuhihnalle voidaan lisätä toinen palikka. Toisen vaiheen testauksesta kuvattiin [video](https://www.dropbox.com/s/mchb3pmm52nt5f5/MVI_7975.MOV?dl=0), jolta nähdään, että valosensori toimii tämänhetkisten vaatimusten mukaisesti.
 
-### Vaihe 3 - suunnitelma
-Kun ohjaimen toiminnallisuus on toteutettu, testataan palikoiden sujuvaa kulkua liukuhihnalla sekä niiden oikeanlaista lajittelua värin perusteella (aihemäärittelyn mukaisesti).
+### Vaihe 3
+Kun ohjaimen toiminnallisuus on toteutettu, testataan palikoiden sujuvaa kulkua liukuhihnalla sekä niiden oikeanlaista lajittelua värin perusteella (aihemäärittelyn mukaisesti). Kuten [videolta](https://www.dropbox.com/s/jcktb20et3ykc7r/File%208.1.2018%2018.47.58.mov?dl=0)nähdään, robotti ei vielä toimi vaatimusten mukaisesti, vaan on mahdollista, että kaksi samanväristä palikkaa voi lajittelussa päätyä eri puolille. Lajittelulogiikka on myös hieman kyseenalainen - tulisiko tummien eli mustien ja sinisten palikoiden päätyä samalle puolelle?
+
+### Vaihe 4 - suunnitelma
+Kunhan lajittelua on saatu korjattua luotettavammaksi, testataan palikoiden lajittelua perusteellisesti - samanväristen palikoiden tulisi aina päätyä samalle puolelle ja tummien/vaaleiden omille osastoilleen.
