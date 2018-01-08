@@ -7,10 +7,12 @@ public class Sorter {
 
 	private BeltController beltCtrl;
 	private ColorReader reader;
+	private Director director;
 
-	public Sorter(BeltController ctrl, ColorReader reader) {
+	public Sorter(BeltController ctrl, ColorReader reader, Director director) {
 		this.beltCtrl = ctrl;
 		this.reader = reader;
+		this.director = director;
 	}
 
 	/**
@@ -18,18 +20,18 @@ public class Sorter {
 	 * hihnan, jos havaitaan pala sensorin alla.
 	 */
 	public void run() throws InterruptedException {
-		reader.setNormal();
+		//reader.setNormal();
 
 		while (beltCtrl.runBelt()) {
 
 			if (reader.readable()) {
 				beltCtrl.stop();
 				reader.value();
-				Thread.sleep(500);
+				director.rotate(reader.greaterThanDivider());
 				beltCtrl.start();
-				Thread.sleep(500);
+				Thread.sleep(750);
 			}
-			// turn guider to correct way before starting belt again
 		}
+		director.center();
 	}
 }

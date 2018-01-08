@@ -18,6 +18,7 @@ public class ColorReader {
 		this.divider = divider;
 		this.threshold = threshold;
 		ls.calibrateLow();
+		this.normal = 8;
 	}
 
 	/**
@@ -40,14 +41,15 @@ public class ColorReader {
 	 * Määrittää, onko sensorin lukema suurempi, kuin annettu raja väriryhmien
 	 * välillä.
 	 */
-	public void greaterThanDivider() {
-		System.out.print(ls.readValue() > this.divider);
+	public boolean greaterThanDivider() {
+		return ls.readValue() > this.divider;
 	}
 
 	/**
 	 * Asettaa normaaliksi sensorin senhetkisen arvon.
 	 */
 	public void setNormal() {
+		System.out.println(ls.readValue());
 		this.normal = ls.readValue();
 	}
 
