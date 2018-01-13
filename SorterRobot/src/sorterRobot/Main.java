@@ -8,10 +8,10 @@ import lejos.nxt.*;
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-		BeltController bc = new BeltController(200, Button.ENTER, Motor.A, new TouchSensor(SensorPort.S1));
-		ColorReader cr = new ColorReader(20, 5, new LightSensor(SensorPort.S2, true));
-		Director dir = new Director(Motor.B, 40);
-		Sorter sorter = new Sorter(bc, cr, dir);
-		sorter.run();
+		BeltController beltCtrl = new BeltController(200, Button.ENTER, Motor.A);
+		ColorReader colorReader = new ColorReader(180, 5, new LightSensor(SensorPort.S1, true));
+		Director director = new Director(Motor.B, 40);
+		Sorter sorter = new Sorter(beltCtrl, colorReader, director);
+		sorter.start();
 	}
 }

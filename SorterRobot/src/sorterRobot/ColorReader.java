@@ -8,17 +8,16 @@ import lejos.nxt.*;
  */
 public class ColorReader {
 
-	private LightSensor ls;
+	private LightSensor lightSensor;
 	private int divider;
 	private int normal;
 	private int threshold;
 
 	public ColorReader(int divider, int threshold, LightSensor sensor) {
-		this.ls = sensor;
+		this.lightSensor = sensor;
 		this.divider = divider;
 		this.threshold = threshold;
-		ls.calibrateLow();
-		this.normal = 8;
+		lightSensor.calibrateHigh();
 	}
 
 	/**
@@ -26,31 +25,38 @@ public class ColorReader {
 	 * 
 	 * @return boolean true/false
 	 */
-	public boolean readable() {
-		return ls.readValue() > normal + threshold;
+	public boolean isReadable() {
+		return lightSensor.readValue() > normal + threshold;
 	}
 
 	/**
 	 * Tulostaa sensorin lukeman NXT:n näytölle-
 	 */
-	public void value() {
-		System.out.println(ls.readValue());
+	public void printValue() {
+		System.out.println(lightSensor.readValue());
 	}
 
 	/**
 	 * Määrittää, onko sensorin lukema suurempi, kuin annettu raja väriryhmien
 	 * välillä.
 	 */
-	public boolean greaterThanDivider() {
-		return ls.readValue() > this.divider;
+	public boolean isGreaterThanDivider() {
+		return lightSensor.readValue() > this.divider;
 	}
 
 	/**
 	 * Asettaa normaaliksi sensorin senhetkisen arvon.
 	 */
 	public void setNormal() {
-		System.out.println(ls.readValue());
-		this.normal = ls.readValue();
+		System.out.println(lightSensor.readValue());
+		this.normal = lightSensor.readValue();
+	}
+	
+	public void calibrateReader(BeltController beltCtrl) throws InterruptedException{
+		beltCtrl.start();
+		Thread.sleep(500);
+		setNormal();
+		beltCtrl.stop();
 	}
 
 }

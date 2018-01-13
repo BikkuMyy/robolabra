@@ -16,20 +16,36 @@ public class Sorter {
 	}
 
 	/**
-	 * Koko toiminnallisuutta pyörittävä metodi, tällä hetkellä pysäyttää
-	 * hihnan, jos havaitaan pala sensorin alla.
+	 * Metodi asettaa valosensorin normaaliarvon ja käynnistää sitten ohjelman.
+	 * 
+	 * @throws InterruptedException
+	 */
+	public void start() throws InterruptedException {
+		System.out.println("Wait for calibration... ");
+		beltCtrl.start();
+		Thread.sleep(2000);
+		reader.setNormal();
+		Thread.sleep(1000);
+		beltCtrl.stop();
+		System.out.print("Done! You can start sorting.");
+		run();
+	}
+
+	/**
+	 * Koko toiminnallisuutta pyörittävä metodi, joka pysäyttää hihnan, jos
+	 * havaitaan pala sensorin alla ja kääntää ohjainta sen mukaisesti.
 	 */
 	public void run() throws InterruptedException {
-		//reader.setNormal();
+		beltCtrl.start();
 
-		while (beltCtrl.runBelt()) {
-
-			if (reader.readable()) {
+		while (beltCtrl.notStopped()) {
+			if (reader.isReadable()) {
 				beltCtrl.stop();
-				reader.value();
-				director.rotate(reader.greaterThanDivider());
+				System.out.print("Palan arvo: ");
+				reader.printValue();
+				director.rotate(reader.isGreaterThanDivider());
 				beltCtrl.start();
-				Thread.sleep(750);
+				Thread.sleep(1000);
 			}
 		}
 		director.center();

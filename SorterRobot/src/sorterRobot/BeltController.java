@@ -8,69 +8,38 @@ import lejos.nxt.*;
 
 public class BeltController {
 
-	private int speed;
 	private Button stopButton;
-	private NXTRegulatedMotor m1;
-	private TouchSensor ts;
-	private boolean running;
+	private NXTRegulatedMotor motor;
 
-	public BeltController(int speed, Button stop, NXTRegulatedMotor motor,
-			TouchSensor sensor) {
-		this.speed = speed;
+	public BeltController(int speed, Button stop, NXTRegulatedMotor motor) {
 		this.stopButton = stop;
-		this.m1 = motor;
-		this.ts = sensor;
-		this.running = false;
+		this.motor = motor;
+		this.motor.setSpeed(speed);
 	}
 
 	/**
-	 * Metodi vastaa liukuhihnan liikkumisesta ja pysähtymisestä jos painetaan
-	 * kosketussensoria tai pysäytysnappia.
+	 * Metodi ilmoittaa, jos liukuhihna pysäytetään.
 	 * 
-	 * @return boolean palauttaa false, kun hihna pysäytetään kokonaan.
+	 * @return boolean palauttaa false, kun hihna pysäytetään, muuten true.
 	 */
-	public boolean runBelt() {
-		m1.setSpeed(speed);
-		this.running = true;
-		m1.backward();
+	public boolean notStopped() {
 		if (stopButton.isPressed()) {
 			return false;
-		}
-		if (ts.isPressed()) {
-			pauseBelt();
 		}
 		return true;
 	}
 
 	/**
-	 * Apumetodi, joka joko käynnistää tai pysäyttää liukuhihnan.
-	 */
-	public void pauseBelt() {
-		if (running) {
-			stop();
-		} else {
-			start();
-		}
-	}
-
-	/**
-	 * Pysäyttää liikkuvan liukuhihnan.
+	 * Pysäyttää liukuhihnan.
 	 */
 	public void stop() {
-		if (running) {
-			m1.stop();
-			running = false;
-		}
+		motor.stop();
 	}
 
 	/**
-	 * Käynnistää pysäytetyn liukuhihnan.
+	 * Käynnistää liukuhihnan.
 	 */
 	public void start() {
-		if (!running) {
-			m1.backward();
-			running = true;
-		}
+		motor.backward();
 	}
-
 }
