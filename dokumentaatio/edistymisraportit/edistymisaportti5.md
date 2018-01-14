@@ -2,7 +2,7 @@
 
 Tuntimäärä ~8h
 
-Tällä viikolla ohjelman ja robotin toiminnallisuudet säilyivät pääasiassa ennallaan ja fokus oli enemmän refaktoroinnissa, debuggauksessa ym. hiomisessa. Tätä kirjoittaessa en ole vielä saanut labtooliin toisen koodikatselmoinnin tietoja.
+Tällä viikolla ohjelman ja robotin toiminnallisuudet säilyivät pääasiassa ennallaan ja fokus oli enemmän refaktoroinnissa, debuggauksessa ym. hiomisessa. Tätä kirjoittaessa en ole vielä saanut labtooliin toisen koodikatselmoinnin tietoja, joten se jäi tekemättä.
 
 Tein pientä refaktorointia koodiin koodikatselmoinnin ehdotuksien perusteella eli koodista lähti turhia lyhenteitä ja muutamat metodit saivat selkeämmän nimen. Lisäksi poistin liukuhinan väliaikaisen pysäyttämistoiminnon kosketussensorilla, koska en kokenut sitä enää tarpeelliseksi, kun liukuhihna joka tapauksessa pysähtyy aina, kuin palikka tulee valosensorin kohdalle. Lisäsin myös koodiin viime viikolla unohtuneita javadoceja ja korjasin vanhoja tarpeen mukaan. 
 
