@@ -25,6 +25,7 @@ public class Sorter {
 		beltCtrl.start();
 		Thread.sleep(2000);
 		reader.setNormal();
+		reader.setDivider();
 		Thread.sleep(1000);
 		beltCtrl.stop();
 		System.out.print("Done! You can start sorting.");

@@ -51,6 +51,10 @@ public class ColorReader {
 		System.out.println(lightSensor.readValue());
 		this.normal = lightSensor.readValue();
 	}
+	public void setDivider(){
+		System.out.print(this.normal+this.divider);
+		this.divider += this.normal;
+	}
 	
 	public void calibrateReader(BeltController beltCtrl) throws InterruptedException{
 		beltCtrl.start();
