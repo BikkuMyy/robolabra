@@ -9,5 +9,5 @@ Testataan lajittelurobotin liukuhihnalle lisätyn valosensorin toimintaa. Kun li
 ### Vaihe 3
 Kun ohjaimen toiminnallisuus on toteutettu, testataan palikoiden sujuvaa kulkua liukuhihnalla sekä niiden oikeanlaista lajittelua värin perusteella (aihemäärittelyn mukaisesti). Kuten [videolta](https://www.dropbox.com/s/jcktb20et3ykc7r/File%208.1.2018%2018.47.58.mov?dl=0) nähdään, robotti ei vielä toimi vaatimusten mukaisesti, vaan on mahdollista, että kaksi samanväristä palikkaa voi lajittelussa päätyä eri puolille. Lajittelulogiikka on myös hieman kyseenalainen - tummien eli mustien ja sinisten palikoiden tulisi päätyä samalle puolelle, mutta nyt ne lajitellaan eri puolille.
 
-### Vaihe 4 - suunnitelma
-Kunhan lajittelua on saatu korjattua luotettavammaksi, testataan palikoiden lajittelua perusteellisesti - samanväristen palikoiden tulisi aina päätyä samalle puolelle ja tummien/vaaleiden omille osastoilleen.
+### Vaihe 4
+Kunhan lajittelua on saatu korjattua luotettavammaksi, testataan palikoiden lajittelua perusteellisesti - samanväristen palikoiden tulisi aina päätyä samalle puolelle ja tummien/vaaleiden omille osastoilleen. Kuten edistymisraportissa 5 mainittiin, testattavia palikoita yhtenäistettiin ja niiden saamien arvojen välille koitettiin saada suurempia eroja lajitteluvarmuuden lisäämiseksi. Näiden muutosten vaikutuksia testattiin ja nyt samanväriset ja -sävyiset (tummat/vaaleat) palikat päätyvät aina samalle puolelle.
