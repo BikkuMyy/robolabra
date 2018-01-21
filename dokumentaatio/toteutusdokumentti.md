@@ -16,4 +16,5 @@ Rakenteellisesti liukuhihnat voisivat olla leveämpiä, jotta palikat kulkisivat
 
 ### Lähteet
 [Samankaltainen toteutus videolla](https://youtu.be/0CeW-zBc0lQ?t=79)
+
 [LeJOS API](http://www.lejos.org/nxt/nxj/api/index.html)
