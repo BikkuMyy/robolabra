@@ -12,5 +12,5 @@ Lego-palikoiden tulisi kulkea liukuhihnalla seuraavasti (hahmotelma alla):
 
 ![Liukuhihna](/dokumentaatio/Liukuhihna.png "Liukuhihna")
 
-Väriryhmiä on kaksi ja eri värit jaotellaan niihin valosensorin havaitseman intensiteetin perusteella.
-Oikeanlaisen lajittelun varmistamiseksi liukuhinhalla voi kulkea vain yksi palikka kerrallaan, mutta perustoiminnallisuuden toteutuksen jälkeen voidaan lisätä palikoiden kulkua tarkkailevia ja rajoittavia toimintoja.
+Väriryhmiä on kaksi ja eri värit jaotellaan niihin valosensorin havaitseman intensiteetin perusteella. Jako väriryhmiin perustuu valosensorin alussa lukemaan normaaliarvoon, johon lisätään tietty vakio. Saatua arvoa suuremmat lajitellaan edestä katsottuna oikealle ja pienemmät vasemmalle liukuhihnalle. Valosensorin toiminnan ansiosta lajittelu ei välttämättä ole looginen.
+Oikeanlaisen lajittelun varmistamiseksi liukuhihnalla voi kulkea vain yksi palikka kerrallaan, mutta perustoiminnallisuuden toteutuksen jälkeen voidaan lisätä palikoiden kulkua tarkkailevia ja rajoittavia toimintoja.

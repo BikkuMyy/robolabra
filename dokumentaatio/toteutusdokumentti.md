@@ -2,7 +2,7 @@
 
 ### Ohjelman rakenne
 
-Ohjelman tämänhetkista rakennetta kuvaa alla oleva luokkakaavio:
+Ohjelman rakennetta kuvaa alla oleva luokkakaavio:
 
 ![Luokkakaavio](/dokumentaatio/Luokkakaavio.png "Luokkakaavio")
 
@@ -12,7 +12,7 @@ Main-metodissa luotu Sorter-olio käyttää konstruktorin parametreina saamiaan 
 Ohjelmisto on toteutettu Lego Mindstorms NXT-robotille Javalla käyttäen leJOS-firmwaren versiota 0.9.0.
 
 ### Puutteet ja parannusehdotukset
-Rakenteellisesti liukuhihnat voisivat olla leveämpiä, jotta palikat kulkisivat niillä sujuvammin. Toteutuksen aikana mietittiin myös palikoiden syöttämisen kontrollointia/automatisointia.
+Rakenteellisesti liukuhihnat voisivat olla leveämpiä, jotta palikat kulkisivat niillä sujuvammin. Myös valosensori sopii tällaiseen tehtävään juuri ja juuri, sillä valon väriä ei voi muuttaa, mikä vaikuttaa tuloksiin. Toteutuksen aikana mietittiin myös palikoiden syöttämisen kontrollointia/automatisointia.
 
 ### Lähteet
 [Samankaltainen toteutus videolla](https://youtu.be/0CeW-zBc0lQ?t=79)
